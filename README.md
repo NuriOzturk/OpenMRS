@@ -1,4 +1,4 @@
-# E-Junkie Test Automation Project – with TestNG 
+# OpenMRS Test Automation Project – with TestNG 
 
 ## 📌 Table of Contents
 - [Project Description](#project-description)
@@ -16,7 +16,7 @@
 
 ## 📝 Project Description
 
-This project was developed to automate test scenarios on the **E-Junkie demo shopping site**.  
+This project was developed to automate test scenarios on the **OpenMRS demo shopping site**.  
 The tests are written using **TestNG**, **Selenium WebDriver**, and the **Page Object Model (POM)** structure. 
 Tests are executed via the `testng.xml` configuration file.
 
@@ -26,18 +26,17 @@ Tests are executed via the `testng.xml` configuration file.
 - Scenario management via `testng.xml`
 - Parallel and cross-browser test support
 
-🔗 [E-Junkie Demo Site](https://shopdemo.e-junkie.com/)  
-🔗 [E-Junkie Main Page](https://www.e-junkie.com/)
+🔗 [E-Junkie Demo Site](https://openmrs.org/)  
 
 ---
 
 ## 🏗️🚛  Project Structure
 
 ```plaintext
-EJunkieProject/
+OpenMRSProject/
 │
 ├── src/
-│   ├── eJunkie/
+│   ├── OpenMRS/
 │   │    │ 
 │   │    ├── base/             # BaseDriver and core structure
 │   │    ├── elements/         # Page Object classes (POM)
@@ -54,104 +53,108 @@ EJunkieProject/
 ```
 ---
 ## 📖 Project Structure Explanation
-- **src/eJunkie/base/**: Contains the `BaseDriver` class and core structure.
-- **src/eJunkie/elements/**: Contains Page Object classes (POM) for each page.
-- **src/eJunkie/methods/**: Contains methods for user actions.
-- **src/eJunkie/tests/**: Contains TestNG test scenarios.
-- **src/eJunkie/tests/XML/**: Contains TestNG configuration files.
-- **src/eJunkie/utility/**: Contains helper classes like `MyFunc`, etc.
+- **src/OpenMRS/base/**: Contains the `BaseDriver` class and core structure.
+- **src/OpenMRS/elements/**: Contains Page Object classes (POM) for each page.
+- **src/OpenMRS/methods/**: Contains methods for user actions.
+- **src/OpenMRS/tests/**: Contains TestNG test scenarios.
+- **src/OpenMRS/tests/XML/**: Contains TestNG configuration files.
+- **src/OpenMRS/utility/**: Contains helper classes like `MyFunc`, etc.
 - **tests_gif/**: Contains GIFs demonstrating test scenarios.
 - **README.md**: Contains project documentation.
 ---
 
 ## 🧑‍💻 User Stories and Test Scenarios
 
-### **1️⃣ US_301 - Add eBook to cart & invalid promo code**
-📌 As a customer, I want to add an eBook to the basket and try applying an invalid promo code, so I can check whether the system correctly displays the "Invalid promo code" warning.
+### **1️⃣ US_401 - **
+📌 As a customer, 
+✅ Expected: 
 
-✅ Expected: "Invalid promo code" warning message is displayed after clicking “Apply.”
+✅ Actual: 
 
-✅ Actual: After adding the eBook to the basket and entering an invalid promo code, the system displayed the warning message "Invalid promo code" upon clicking “Apply.”
+<img src="tests_gif/" alt="U" width="800" height="500"/>
 
-<img src="tests_gif/US301.gif" alt="US301_EJunkieAddingEbook.gif" width="800" height="500"/>
+### **2️⃣ US_402 - **
+📌 As a customer, 
+✅ Expected: 
+✅ Actual: 
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-### **2️⃣ US_302 - Payment attempt with missing information**
-📌 As a customer, I want to attempt payment without entering required fields like email or billing name, so I can confirm that the form validations are triggered.
+### **3️⃣ US_403 - **
+📌 As a customer, 
+✅ Expected: 
+✅ Actual: 
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-✅ Expected: "Invalid email" and "Invalid billing name" error messages are displayed.
+### **4️⃣ US_404 - **
+📌 As a customer, 
+✅ Expected: 
 
-✅ Actual: When the required fields like email and billing name were left empty, the system triggered the form validations and displayed the error messages "Invalid email" and "Invalid billing name."
+✅ Actual: 
+<img src="tests_gif/" alt=" " width="800" height="500"/>
 
-<img src="tests_gif/US302.gif" alt="US302_DebitCardFaultyPayment.gif" width="800" height="500"/>
+### **5️⃣ US_405 - **
+📌 As a customer, 
 
-### **3️⃣ US_303 - Invalid card number payment attempt**
-📌 As a customer, I want to enter a fake card number during payment so I can verify that the system blocks invalid card details.
+✅ Expected: 
 
-✅ Expected: "Your card number is invalid" warning appears.
+✅ Actual: 
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-✅ Actual: When a fake card number was entered, the system correctly blocked the payment and displayed the warning message "Your card number is invalid."
+### **6️⃣ US_406 - **
+📌 As a customer, 
+✅ Expected: 
 
-<img src="tests_gif/US303.gif" alt="US303_FailedPaymentCheck.gif" width="800" height="500"/>
+✅ Actual: 
 
-### **4️⃣ US_304 - Successful payment with valid card**
-📌 As a customer, I want to complete the payment with valid card details so I can receive confirmation of a successful purchase.
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-✅ Expected: "Your order has been confirmed. Thank you!" is displayed.
+### **7️⃣ US_407 - **
+📌 As a customer, 
+✅ Expected: 
 
-✅ Actual: The payment was completed successfully with valid card details, and the message "Your order has been confirmed. Thank you!" was displayed.
+✅ Actual: 
 
-<img src="tests_gif/US304.gif" alt="US304_PaymentCC.gif" width="800" height="500"/>
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-### **5️⃣ US_305 - Can user download the eBook?**
-📌 As a customer, I want to be able to download the eBook immediately after a successful purchase.
+### **8️⃣ US_408 - **
+📌 As a customer, 
+✅ Expected: 
 
-✅ Expected: File download starts and matches the purchased content.
+✅ Actual: 
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-✅ Actual: The eBook download started immediately after the successful purchase and matched the purchased content.
+---
 
-<img src="tests_gif/US305.gif" alt="US305_PaymentProcessApprovalDownload.gif" width="800" height="500"/>
+### **8️⃣ US_409 - **
+📌 As a customer,
+✅ Expected:
 
-### **6️⃣ US_306 - Submit contact form**
-📌 As a customer, I want to send a message through the contact form to get support, and if CAPTCHA is not verified, I should be warned.
+✅ Actual:
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
-✅ Expected: "Recaptcha did not match" error message appears.
+---
 
-✅ Actual: "Recaptcha did not match" error message appeared.
+### **8️⃣ US_410 - **
+📌 As a customer,
+✅ Expected:
 
-<img src="tests_gif/US306.gif" alt="US306_EJunkie_ContactUs.gif" width="800" height="500"/>
-
-### **7️⃣ US_307 - Access main e-junkie page**
-📌 As a customer, I want to navigate from the demo site to the official e-junkie homepage to verify the redirection works correctly.
-
-✅ Expected: Final URL matches e-junkie.com.
-
-✅ Actual: Final URL matched e-junkie.com.
-
-<img src="tests_gif/US307.gif" alt="US307_EJunkie_Logo.gif" width="800" height="500"/>
-
-### **8️⃣ US_308 - Access 'How it works' video**
-📌 As a customer, I want to play the 'How it works' video and ensure it starts, plays for 10 seconds, and closes properly.
-
-✅ Expected: Video plays and closes after 10 seconds.
-
-✅ Actual: The video started playing successfully, continued for 10 seconds, and closed as expected without any issues.
-
-<img src="tests_gif/US308.gif" alt="US308_EJunkieInformationVideo.gif" width="800" height="500"/>
+✅ Actual:
+<img src="tests_gif/" alt="" width="800" height="500"/>
 
 ---
 
 ## 📊 **Test Coverage Table**
 
-| Test Scenario                                   | Status     | Priority |
-|-------------------------------------------------|------------|----------|
-| Add eBook to cart & invalid promo code          | ✅ Passed  | Medium   |
-| Payment attempt with missing information        | ✅ Passed  | High     |
-| Invalid card number payment attempt             | ✅ Passed  | High   |
-| Successful payment with valid card              | ✅ Passed  | High     |
-| Can user download the eBook                     | ✅ Passed  | High   |
-| Submit contact form                             | ✅ Passed  | Medium      |
-| Access main e-junkie page                       | ✅ Passed  | Low   |
-| Access 'How it works' video                     | ✅ Passed  | Low      |
+| Test Scenario                                | Status     | Priority |
+|----------------------------------------------|------------|----------|
+|          | ✅ Passed  | Medium   |
+|         | ✅ Passed  | High     |
+|             | ✅ Passed  | High   |
+|             | ✅ Passed  | High     |
+|                   | ✅ Passed  | High   |
+|                           | ✅ Passed  | Medium      |
+|                     | ✅ Passed  | Low   |
+|                    | ✅ Passed  | Low      |
 
 ---
 
@@ -180,14 +183,15 @@ To ensure the project runs correctly, the following libraries must be added to t
 ---
 ## 👨‍💻 Project Team
 
-| Name                | Role                                | User Story     |
-|---------------------|--------------------------------------|----------------|
-| **Yiğit Çam**        | Project Lead - QA Automation Eng.   | US_301         |
-| **Zafer Ataklı**     | QA Automation Engineer              | US_306, US_307 |
-| **Rıfat Batır**       | QA Automation Engineer              | US_304,US_305  |
-| **Nuri Öztürk**       | QA Automation Engineer              | US_308         |
-| **Azim Korkmaz**      | QA Automation Engineer              | US_303         |
-| **Mert Can Özdemir**  | QA Automation Engineer              | US_302         |
+| Name                 | Role                                | User Story  |
+|----------------------|--------------------------------------|-------------|
+| **Nuri Ozturk**      | Project Lead - QA Automation Eng.   |       |
+| **Zafer Ataklı**     | QA Automation Engineer              |  |
+| **Tugba Kilic**      | QA Automation Engineer              |  |
+| **Rıfat Batır**      | QA Automation Engineer              |  |
+| **Azim Korkmaz**     | QA Automation Engineer              |       |
+| **Yigit Cam**        | QA Automation Engineer              |       |
+| **Mert Can Özdemir** | QA Automation Engineer              |       |
 
 > Note: This is a collaborative QA training project.
 
@@ -195,7 +199,7 @@ To ensure the project runs correctly, the following libraries must be added to t
 
 ## 🔗 GitHub Repository
 
-📂 [E-Junkie TestNG Automation Repository](https://github.com/Yigit-Cam/E-JunkieProject)
+📂 [OpenMRS TestNG Automation Repository](hhttps://github.com/NuriOzturk/OpenMRS)
 
 ---
 
@@ -203,6 +207,7 @@ To ensure the project runs correctly, the following libraries must be added to t
 
 - **[Zafer Ataklı](https://github.com/zaferatakli)**
 - **[Yiğit Çam](https://github.com/Yigit-Cam)**
+- **[Tugba Kilic](https://github.com/TugbaKilic33)**
 - **[Rıfat Batır](https://github.com/rftbtr)**
 - **[Azim Korkmaz](https://github.com/AzimKorkmaz)**
 - **[Nuri Öztürk](https://github.com/NuriOzturk)**
