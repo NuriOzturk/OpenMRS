@@ -2,10 +2,10 @@ package OpenMRS.tests;
 
 import OpenMRS.base.BaseDriverParameter;
 import OpenMRS.methods.TC_402_Methods;
-import org.testng.annotations.Parameters;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
-public class TC_402 extends BaseDriverParameter {
+public class TC_402_LoginTest extends BaseDriverParameter {
+
     @Test
     @Parameters({"BrowserType"})
     public void loginTest() {

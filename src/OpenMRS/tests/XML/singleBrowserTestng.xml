@@ -5,7 +5,9 @@
     <test name="ChromeOnlyTests">
         <parameter name="BrowserType" value="chrome"/>
         <classes>
-            <class name="OpenMRS.tests.TC_404"/>
+            <class name="OpenMRS.tests.TC_401_LoginTestWithInvalidData"/>
+            <class name="OpenMRS.tests.TC_402_LoginTest"/>
+            <class name="OpenMRS.tests.TC_403_Logout"/>
         </classes>
     </test>
 </suite>

@@ -1,6 +1,6 @@
 package OpenMRS.methods;
 
-import OpenMRS.elements.TC_402_Elements;
+import OpenMRS.elements.TC_401_402_403_Elements;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -11,7 +11,7 @@ public class TC_402_Methods {
     WebDriver driver;
     Actions action;
     WebDriverWait wait;
-    TC_402_Elements elements;
+    TC_401_402_403_Elements elements;
 
     public TC_402_Methods(WebDriver driver, Actions action, WebDriverWait wait) {
         this.driver = driver;
@@ -20,7 +20,7 @@ public class TC_402_Methods {
     }
 
     public void login() {
-        elements = new TC_402_Elements(driver);
+        elements = new TC_401_402_403_Elements(driver);
         String username = "Admin";
         String password = "Admin123";
 

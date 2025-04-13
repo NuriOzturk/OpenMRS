@@ -5,14 +5,18 @@
     <test name="ChromeTests">
         <parameter name="BrowserType" value="chrome"/>
         <classes>
-
+            <class name="OpenMRS.tests.TC_401_LoginTestWithInvalidData"/>
+            <class name="OpenMRS.tests.TC_402_LoginTest"/>
+            <class name="OpenMRS.tests.TC_403_Logout"/>
         </classes>
     </test>
 
     <test name="EdgeTests">
         <parameter name="BrowserType" value="edge"/>
         <classes>
-
+            <class name="OpenMRS.tests.TC_401_LoginTestWithInvalidData"/>
+            <class name="OpenMRS.tests.TC_402_LoginTest"/>
+            <class name="OpenMRS.tests.TC_403_Logout"/>
         </classes>
     </test>
 </suite>
