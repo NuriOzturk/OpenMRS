@@ -3,12 +3,12 @@ package OpenMRS.base;
 import Utility.MyFunc;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
+import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 
@@ -20,20 +20,24 @@ public class BaseDriverParameter {
     @BeforeClass
     @Parameters("BrowserType")
     public void Setup(String browserType) {
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--lang=en");
+        EdgeOptions edgeOptions = new EdgeOptions();
+        edgeOptions.addArguments("--lang=en");
 
         switch (browserType.toLowerCase()) {
             case "edge":
-                driver = new EdgeDriver();
+                driver = new EdgeDriver(edgeOptions);
                 break;
             case "chrome":
             default:
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(chromeOptions);
         }
 
         driver.manage().window().maximize();
-        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(40));
+        driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        wait = new WebDriverWait(driver, Duration.ofSeconds(140)); // The time was kept long in order to pass the captcha verifications manually.
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         action = new Actions(driver);
         driver.get("https://openmrs.org/");
     }
@@ -41,6 +45,8 @@ public class BaseDriverParameter {
     @AfterClass
     public void TearDown() {
         MyFunc.Sleep(5);
-        driver.quit();
+        if (driver != null) {
+            driver.quit();
+        }
     }
 }
