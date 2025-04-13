@@ -5,9 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class TC_402_Elements {
+public class TC_401_402_403_Elements {
 
-    public TC_402_Elements(WebDriver driver) {
+    public TC_401_402_403_Elements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
 
@@ -35,5 +35,12 @@ public class TC_402_Elements {
     @FindBy(xpath = "//i[@class='icon-search']")
     public WebElement findPatientIcon;
 
+    @FindBy(xpath = "//i[@class='icon-signout small']")
+    public WebElement logoutButton;
 
+    @FindBy(xpath = "//span[@id='sessionLocationError']")
+    public WebElement locationErrorMessage;
+
+    @FindBy(xpath = "//div[@id='error-message']")
+    public WebElement invalidLoginErrorMessage;
 }

@@ -16,7 +16,7 @@
 
 ## 📝 Project Description
 
-This project was developed to automate test scenarios on the **OpenMRS demo shopping site**.  
+This project was developed to automate test scenarios on the **OpenMRS demo site**.  
 The tests are written using **TestNG**, **Selenium WebDriver**, and the **Page Object Model (POM)** structure. 
 Tests are executed via the `testng.xml` configuration file.
 
@@ -26,7 +26,7 @@ Tests are executed via the `testng.xml` configuration file.
 - Scenario management via `testng.xml`
 - Parallel and cross-browser test support
 
-🔗 [E-Junkie Demo Site](https://openmrs.org/)  
+🔗 [OpenMRS Demo](https://openmrs.org/)  
 
 ---
 
@@ -65,25 +65,28 @@ OpenMRSProject/
 
 ## 🧑‍💻 User Stories and Test Scenarios
 
-### **1️⃣ US_401 - **
+### **1️⃣ US_401 - Login test with invalid user data**
 📌 As a customer, 
 ✅ Expected: 
 
 ✅ Actual: 
 
-<img src="tests_gif/" alt="U" width="800" height="500"/>
+<img src="tests_gif/US_401.gif" alt="US_401.gif" width="800" height="500"/>
 
-### **2️⃣ US_402 - **
+
+### **2️⃣ US_402 Login test with valid user data**
 📌 As a customer, 
 ✅ Expected: 
 ✅ Actual: 
-<img src="tests_gif/" alt="" width="800" height="500"/>
 
-### **3️⃣ US_403 - **
+<img src="tests_gif/US_402.gif" alt="402" width="800" height="500"/>
+
+### **3️⃣ US_403 - Logout**
 📌 As a customer, 
 ✅ Expected: 
 ✅ Actual: 
-<img src="tests_gif/" alt="" width="800" height="500"/>
+
+<img src="tests_gif/US_403.gif" alt="403" width="800" height="500"/>
 
 ### **4️⃣ US_404 - **
 📌 As a customer, 
