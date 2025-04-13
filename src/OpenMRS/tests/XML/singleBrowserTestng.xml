@@ -5,7 +5,7 @@
     <test name="ChromeOnlyTests">
         <parameter name="BrowserType" value="chrome"/>
         <classes>
-
+            <class name="OpenMRS.tests.TC_404"/>
         </classes>
     </test>
 </suite>
