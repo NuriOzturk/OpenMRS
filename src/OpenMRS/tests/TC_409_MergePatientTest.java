@@ -17,6 +17,4 @@ public class TC_409_MergePatientTest extends BaseDriverParameter {
         loginMethods.login();
         methods.mergePatient();
     }
-
-
 }
