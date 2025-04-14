@@ -22,8 +22,8 @@ public class MyFunc {
     public static int GetRandomNumber(int max) {
         return (int) (Math.random() * max);
     }
-    public static void scrollElement(WebElement element) {
-        JavascriptExecutor js = (JavascriptExecutor) driver;
+    public static void scrollElement(BaseDriverParameter driver, WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) MyFunc.driver;
         js.executeScript("arguments[0].scrollIntoView();", element);
     }
 }
