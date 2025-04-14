@@ -71,7 +71,7 @@ OpenMRSProject/
 
 ✅ Actual: 
 
-<img src="tests_gif/US_401.gif" alt="US_401.gif" width="800" height="500"/>
+<img src="tests_gif/TC_401.gif" alt="US_401.gif" width="800" height="500"/>
 
 
 ### **2️⃣ US_402 Login test with valid user data**
@@ -79,14 +79,14 @@ OpenMRSProject/
 ✅ Expected: 
 ✅ Actual: 
 
-<img src="tests_gif/US_402.gif" alt="402" width="800" height="500"/>
+<img src="tests_gif/TC_402.gif" alt="402" width="800" height="500"/>
 
 ### **3️⃣ US_403 - Logout**
 📌 As a customer, 
 ✅ Expected: 
 ✅ Actual: 
 
-<img src="tests_gif/US_403.gif" alt="403" width="800" height="500"/>
+<img src="tests_gif/TC_403.gif" alt="403" width="800" height="500"/>
 
 ### **4️⃣ US_404 - **
 📌 As a customer, 

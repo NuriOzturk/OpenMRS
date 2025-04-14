@@ -19,10 +19,10 @@ public class TC_409_Elements {
     @FindBy(xpath = "//input[@placeholder='Search by ID or Name']")
     public WebElement searchByName;
 
-    @FindBy(xpath = "(//tr[@class='even'])[1]")
+    @FindBy(xpath = "(//tr[@class='odd'])[1]")
     public WebElement firstPatient;
 
-    @FindBy(xpath = "(//tr[@class='even'])[2]")
+    @FindBy(xpath = "(//tr[@class='even'])[1]")
     public WebElement secondPatient;
 
     @FindBy(xpath = "//input[@id='confirm-button']")
@@ -39,4 +39,49 @@ public class TC_409_Elements {
 
     @FindBy(xpath = "//div[@class='float-sm-right']")
     public WebElement mergedPatient;
+
+    @FindBy(xpath ="(//*[@type='button'])[5]")
+    public WebElement registerBtn;
+
+    @FindBy(xpath = "//input[@name='givenName']")
+    public WebElement givenName;
+
+    @FindBy(xpath = "//input[@name='familyName']")
+    public WebElement familyName;
+
+    @FindBy(xpath = "//icon[@class='fas fa-chevron-right']")
+    public WebElement nextBtn;
+
+    @FindBy(xpath= "//*[@id='gender-field']")
+    public WebElement gender;
+
+    @FindBy(xpath = "//button[@id='next-button']")
+    public WebElement nextBtn1;
+
+    @FindBy(xpath = "//input[@name='birthdateDay']")
+    public WebElement birthdayDay;
+
+    @FindBy(xpath = "//*[@name='birthdateMonth']")
+    public WebElement birthdayMonth;
+
+    @FindBy(xpath = "//*[@name='birthdateYear']")
+    public WebElement birthdayYear;
+
+    @FindBy(xpath = "//input[@id='address1']")
+    public WebElement address;
+
+    @FindBy(xpath = "//input[@name='phoneNumber']")
+    public WebElement phoneNumber;
+
+    @FindBy(xpath = "//*[@name='relationship_type']")
+    public WebElement relationshipType;
+
+    @FindBy(xpath = "//*[@placeholder='Person Name']")
+    public WebElement personName;
+
+    @FindBy(xpath = "//input[@value='Confirm']")
+    public WebElement confirmBtn;
+
+    @FindBy(xpath = "//a[@href='/openmrs/referenceapplication/home.page']")
+    public WebElement homeBtn;
 }
