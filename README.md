@@ -93,7 +93,8 @@ OpenMRSProject/
 ✅ Expected: 
 
 ✅ Actual: 
-<img src="tests_gif/" alt=" " width="800" height="500"/>
+
+<img src="tests_gif/TC_404.gif" alt="404" width="800" height="500"/>
 
 ### **5️⃣ US_405 - **
 📌 As a customer, 
@@ -117,7 +118,7 @@ OpenMRSProject/
 
 ✅ Actual: 
 
-<img src="tests_gif/" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_407.gif" alt="" width="800" height="500"/>
 
 ### **8️⃣ US_408 - **
 📌 As a customer, 
@@ -128,12 +129,13 @@ OpenMRSProject/
 
 ---
 
-### **8️⃣ US_409 - **
+### **8️⃣ US_409 - MergePatientTest**
 📌 As a customer,
 ✅ Expected:
 
 ✅ Actual:
-<img src="tests_gif/" alt="" width="800" height="500"/>
+
+<img src="tests_gif/TC_409.gif" alt="" width="800" height="500"/>
 
 ---
 
