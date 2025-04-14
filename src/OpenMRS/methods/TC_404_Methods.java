@@ -10,7 +10,6 @@ public class TC_404_Methods {
     Actions action;
     WebDriverWait wait;
     TC_404_Elements elements;
-    TC_402_Methods LoginMethods;
 
     public TC_404_Methods(WebDriver driver, Actions action, WebDriverWait wait) {
         this.driver = driver;
@@ -19,8 +18,6 @@ public class TC_404_Methods {
     }
 
     public void patientRegistrations() {
-        elements = new TC_404_Elements(driver);
-        LoginMethods = new TC_402_Methods(driver, action, wait);
-        LoginMethods.login();
+
     }
 }
