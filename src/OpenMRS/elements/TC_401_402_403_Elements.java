@@ -14,7 +14,7 @@ public class TC_401_402_403_Elements {
     @FindBy(xpath = "//a[@class='zak-button']")
     public WebElement demoButton;
 
-    @FindBy(xpath = "//span[@class='elementor-button-text'][text()='Enter the OpenMRS 2 Demo']")
+    @FindBy(xpath = "(// span[@class='elementor-button-text'])[4]")
     public WebElement enterDemoButton;
 
     @FindBy(xpath = "//i[@class='icon-lock small']")
