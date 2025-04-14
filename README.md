@@ -16,14 +16,14 @@
 
 ## 📝 Project Description
 
-This project was developed to automate test scenarios on the **OpenMRS demo site**.  
-The tests are written using **TestNG**, **Selenium WebDriver**, and the **Page Object Model (POM)** structure. 
-Tests are executed via the `testng.xml` configuration file.
+This project automates test scenarios for the **OpenMRS Demo System**, an open-source medical record platform.  
+The test scenarios are implemented using **TestNG**, **Selenium WebDriver**, and follow the **Page Object Model (POM)** structure.  
+Test executions are configured through the `testng.xml` file.
 
-
-✅ Features:
-- Designed using POM architecture
-- Scenario management via `testng.xml`
+📅 Features:
+- Modular POM design
+- Test grouping and execution via `testng.xml`
+- Data-driven testing using `@DataProvider`
 - Parallel and cross-browser test support
 
 🔗 [OpenMRS Demo](https://openmrs.org/)  
@@ -46,6 +46,7 @@ OpenMRSProject/
 │   │
 │   └── utility/               # Helper classes (MyFunc, etc.)
 │
+├── test-output/               # TestNG output reports
 ├── tests_gif/                 # Test GIFs
 │ 
 └── README.md                  # Project documentation
@@ -59,6 +60,7 @@ OpenMRSProject/
 - **src/OpenMRS/tests/**: Contains TestNG test scenarios.
 - **src/OpenMRS/tests/XML/**: Contains TestNG configuration files.
 - **src/OpenMRS/utility/**: Contains helper classes like `MyFunc`, etc.
+- **test-output/**: Contains TestNG output reports.
 - **tests_gif/**: Contains GIFs demonstrating test scenarios.
 - **README.md**: Contains project documentation.
 ---
@@ -66,100 +68,109 @@ OpenMRSProject/
 ## 🧑‍💻 User Stories and Test Scenarios
 
 ### **1️⃣ US_401 - Login test with invalid user data**
-📌 As a customer, 
-✅ Expected: 
+📌 As a user, I want to see error messages for failed login attempts to enhance system security.
 
-✅ Actual: 
+✅ Expected: Location selection and invalid credential errors are displayed appropriately.
+
+✅ Actual: Relevant warnings such as "You must choose a location!" and "Invalid username/password. Please try again." appeared.
 
 <img src="tests_gif/TC_401.gif" alt="US_401.gif" width="800" height="500"/>
 
 
 ### **2️⃣ US_402 Login test with valid user data**
-📌 As a customer, 
-✅ Expected: 
-✅ Actual: 
+📌 As a user, I want to log into the system with valid credentials to access system features.
+
+✅ Expected: User logs in successfully after selecting a location.
+
+✅ Actual: Successful login occurred with correct username, password, and location.
 
 <img src="tests_gif/TC_402.gif" alt="402" width="800" height="500"/>
 
 ### **3️⃣ US_403 - Logout**
-📌 As a customer, 
-✅ Expected: 
-✅ Actual: 
+📌 As a user, I want to log out of the system to protect sensitive data.
+
+✅ Expected: Clicking "Logout" redirects to the login page.
+
+✅ Actual: The session ended successfully, and the user was logged out.
 
 <img src="tests_gif/TC_403.gif" alt="403" width="800" height="500"/>
 
-### **4️⃣ US_404 - **
-📌 As a customer, 
-✅ Expected: 
+### **4️⃣ US_404 - Patient registration**
+📌 As a user, I want to be able to register a patient by entering their information into the system.
 
-✅ Actual: 
+✅ Expected: User registers a new patient with demographic/contact/relationship info.
+✅ Actual: Patient appeared in the system after successful registration.
 
 <img src="tests_gif/TC_404.gif" alt="404" width="800" height="500"/>
 
-### **5️⃣ US_405 - **
-📌 As a customer, 
+### **5️⃣ US_405 - Access account settings**
+📌 As a user, I want to have an icon or link on the homepage that leads to my account settings.
 
-✅ Expected: 
-
-✅ Actual: 
-<img src="tests_gif/" alt="" width="800" height="500"/>
-
-### **6️⃣ US_406 - **
-📌 As a customer, 
-✅ Expected: 
-
-✅ Actual: 
+✅ Expected: “My Account” opens with settings options like “Change Password.”
+✅ Actual: User accessed and interacted with account settings.
 
 <img src="tests_gif/" alt="" width="800" height="500"/>
 
-### **7️⃣ US_407 - **
-📌 As a customer, 
-✅ Expected: 
+### **6️⃣ US_406 - Patient search in list**
+📌 As a doctor, I want to search for a specific patient to access their information.
 
-✅ Actual: 
+✅ Expected: Valid searches return patient data; invalid searches show “No match.”
+✅ Actual: Both positive and negative test cases passed.
+
+<img src="tests_gif/" alt="" width="800" height="500"/>
+
+### **7️⃣ US_407 - Patient deletion**
+📌 As a doctor, I want to be able to delete a patient from the system.
+
+✅ Expected: Doctor deletes patient record with a valid reason.
+✅ Actual: Patient data successfully removed from the system.
 
 <img src="tests_gif/TC_407.gif" alt="" width="800" height="500"/>
 
-### **8️⃣ US_408 - **
-📌 As a customer, 
-✅ Expected: 
+### **8️⃣ US_408 - List all patients**
+📌 As a doctor, I want to list all patients so that I can plan more effectively.
 
-✅ Actual: 
+✅ Expected: The number of rows in the patient table matches the summary below.
+✅ Actual: Patient list and summary count were consistent.
+
 <img src="tests_gif/" alt="" width="800" height="500"/>
 
 ---
 
-### **8️⃣ US_409 - MergePatientTest**
-📌 As a customer,
-✅ Expected:
+### **9️⃣ US_409 - Merge patient records**
+📌 As a doctor, I want to merge duplicate patient records to manage information better.
 
-✅ Actual:
+✅ Expected: Records merged after selecting IDs and confirming.
+✅ Actual: Patient records merged and displayed correctly.
 
 <img src="tests_gif/TC_409.gif" alt="" width="800" height="500"/>
 
 ---
 
-### **8️⃣ US_410 - **
-📌 As a customer,
-✅ Expected:
+### **🔟 US_410 - Timezone error on appointment**
+📌 As a user, I want to see an error message when scheduling an appointment with incorrect system timezone.
 
-✅ Actual:
+✅ Expected: Error appears if timezone is not GMT+0.
+✅ Actual: Application blocked scheduling until the timezone was corrected.
+
 <img src="tests_gif/" alt="" width="800" height="500"/>
 
 ---
 
 ## 📊 **Test Coverage Table**
 
-| Test Scenario                                | Status     | Priority |
-|----------------------------------------------|------------|----------|
-|          | ✅ Passed  | Medium   |
-|         | ✅ Passed  | High     |
-|             | ✅ Passed  | High   |
-|             | ✅ Passed  | High     |
-|                   | ✅ Passed  | High   |
-|                           | ✅ Passed  | Medium      |
-|                     | ✅ Passed  | Low   |
-|                    | ✅ Passed  | Low      |
+| Test Scenario                              | Status     | Priority |
+|--------------------------------------------|------------|----------|
+| US_401 - Login errors                      | ✅ Passed  | High     |
+| US_402 - Successful login                  | ✅ Passed  | High     |
+| US_403 - Logout                            | ✅ Passed  | High     |
+| US_404 - Patient registration              | ✅ Passed  | Medium   |
+| US_405 - My account settings               | ✅ Passed  | Low      |
+| US_406 - Patient search                    | ✅ Passed  | High     |
+| US_407 - Patient deletion                  | ✅ Passed  | High     |
+| US_408 - List all patients                 | ✅ Passed  | Medium   |
+| US_409 - Merge patient records             | ✅ Passed  | Medium   |
+| US_410 - Timezone error during appointment | ✅ Passed  | Low      |
 
 ---
 
@@ -188,15 +199,15 @@ To ensure the project runs correctly, the following libraries must be added to t
 ---
 ## 👨‍💻 Project Team
 
-| Name                 | Role                                | User Story  |
-|----------------------|--------------------------------------|-------------|
-| **Nuri Ozturk**      | Project Lead - QA Automation Eng.   |       |
-| **Zafer Ataklı**     | QA Automation Engineer              |  |
-| **Tugba Kilic**      | QA Automation Engineer              |  |
-| **Rıfat Batır**      | QA Automation Engineer              |  |
-| **Azim Korkmaz**     | QA Automation Engineer              |       |
-| **Yigit Cam**        | QA Automation Engineer              |       |
-| **Mert Can Özdemir** | QA Automation Engineer              |       |
+| Name                 | Role                                | User Story             |
+|----------------------|--------------------------------------|------------------------|
+| **Nuri Ozturk**      | Project Lead - QA Automation Eng.   | US_409                 |
+| **Zafer Ataklı**     | QA Automation Engineer              | US_401, US_402, US_403 |
+| **Tugba Kilic**      | QA Automation Engineer              | US_405                 |
+| **Rıfat Batır**      | QA Automation Engineer              | US_404, US_407         |
+| **Azim Korkmaz**     | QA Automation Engineer              | US_408                 |
+| **Yigit Cam**        | QA Automation Engineer              | US_406                 |
+| **Mert Can Özdemir** | QA Automation Engineer              | US_410                 |
 
 > Note: This is a collaborative QA training project.
 
@@ -211,8 +222,8 @@ To ensure the project runs correctly, the following libraries must be added to t
 ## 👨‍💻 Project Team GitHub
 
 - **[Zafer Ataklı](https://github.com/zaferatakli)**
+- **[Tugba Kılıç](https://github.com/TugbaKilic33)**
 - **[Yiğit Çam](https://github.com/Yigit-Cam)**
-- **[Tugba Kilic](https://github.com/TugbaKilic33)**
 - **[Rıfat Batır](https://github.com/rftbtr)**
 - **[Azim Korkmaz](https://github.com/AzimKorkmaz)**
 - **[Nuri Öztürk](https://github.com/NuriOzturk)**
