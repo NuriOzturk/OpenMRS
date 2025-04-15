@@ -27,8 +27,14 @@ public class TC_402_Methods {
         wait.until(ExpectedConditions.visibilityOf(elements.demoButton)).click();
         Assert.assertTrue(elements.demoButton.isDisplayed(), "Demo button is not displayed");
 
+        action.scrollByAmount(0, 500).perform();
+        wait.until(ExpectedConditions.elementToBeClickable(elements.exploreOpenMRSButton));
+        Assert.assertTrue(elements.exploreOpenMRSButton.isDisplayed(), "Explore OpenMRS button is not displayed");
+        elements.exploreOpenMRSButton.click();
+
         action.scrollByAmount(0, 1000).perform();
         wait.until(ExpectedConditions.visibilityOf(elements.enterDemoButton));
+        Assert.assertTrue(elements.enterDemoButton.isDisplayed(), "Enter Demo button is not displayed");
         elements.enterDemoButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.loginPageIcon));
