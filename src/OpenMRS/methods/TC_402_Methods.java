@@ -21,7 +21,7 @@ public class TC_402_Methods {
 
     public void login() {
         elements = new TC_401_402_403_Elements(driver);
-        String username = "Admin";
+        String username = "admin";
         String password = "Admin123";
 
         wait.until(ExpectedConditions.visibilityOf(elements.demoButton)).click();
