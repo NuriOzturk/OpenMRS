@@ -27,6 +27,5 @@ public class TC_408_Methods {
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientRecordList));
         Assert.assertTrue(elements.patientRecordList.isDisplayed(), "Find Patient Record");
-
     }
 }

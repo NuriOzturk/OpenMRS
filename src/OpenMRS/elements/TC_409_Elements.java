@@ -5,7 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
+import java.util.List;
+
 public class TC_409_Elements {
+
     public TC_409_Elements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -40,7 +43,7 @@ public class TC_409_Elements {
     @FindBy(xpath = "//div[@class='float-sm-right']")
     public WebElement mergedPatient;
 
-    @FindBy(xpath ="(//*[@type='button'])[5]")
+    @FindBy(xpath = "(//*[@type='button'])[7]")
     public WebElement registerBtn;
 
     @FindBy(xpath = "//input[@name='givenName']")
@@ -49,14 +52,11 @@ public class TC_409_Elements {
     @FindBy(xpath = "//input[@name='familyName']")
     public WebElement familyName;
 
-    @FindBy(xpath = "//icon[@class='fas fa-chevron-right']")
-    public WebElement nextBtn;
-
-    @FindBy(xpath= "//*[@id='gender-field']")
+    @FindBy(xpath = "//*[@id='gender-field']")
     public WebElement gender;
 
     @FindBy(xpath = "//button[@id='next-button']")
-    public WebElement nextBtn1;
+    public WebElement nextBtn;
 
     @FindBy(xpath = "//input[@name='birthdateDay']")
     public WebElement birthdayDay;
