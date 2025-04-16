@@ -1,7 +1,6 @@
 package OpenMRS.methods;
 
 import OpenMRS.elements.TC_404_407_Elements;
-import Utility.MyFunc;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -81,7 +80,6 @@ public class TC_404_Methods {
         elements.relativesNameield.sendKeys(relativesName);
         elements.nextButton.click();
 
-
         Assert.assertTrue(elements.nameCheckField.getText().contains(firstName + ", " + middleName + ", " + familyName));
         Assert.assertTrue(elements.genderCheckField.getText().contains(gender));
         Assert.assertTrue(elements.birthdateCheckField.getText().contains(birthdate));
@@ -89,10 +87,6 @@ public class TC_404_Methods {
         Assert.assertTrue(elements.phoneNumberCheckField.getText().contains(phoneNumber));
         Assert.assertTrue(elements.relativesCheckField.getText().contains(relativesName+" - "+relativesType));
         elements.confirmButton.click();
-
-
-        MyFunc.Sleep(30);
-
 
     }
 }

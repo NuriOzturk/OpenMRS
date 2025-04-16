@@ -60,18 +60,5 @@ public class TC_407_Methods {
         Assert.assertEquals(elements.searchResult.getText(),"No matching records found");
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     }
 }
