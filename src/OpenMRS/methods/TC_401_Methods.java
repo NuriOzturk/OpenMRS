@@ -34,6 +34,8 @@ public class TC_401_Methods {
 
     public void loginWithInvalidData(String username, String password, Boolean locationCheck) {
         elements = new TC_401_402_403_Elements(driver);
+        driver.navigate().refresh();
+        wait.until(ExpectedConditions.visibilityOf(elements.usernameField));
         elements.usernameField.clear();
         wait.until(ExpectedConditions.elementToBeClickable(elements.usernameField));
         elements.usernameField.sendKeys(username);
@@ -42,16 +44,18 @@ public class TC_401_Methods {
         elements.passwordField.sendKeys(password);
 
         if (!locationCheck) {
+            wait.until(ExpectedConditions.visibilityOf(elements.loginButton));
             wait.until(ExpectedConditions.elementToBeClickable(elements.loginButton));
             elements.loginButton.click();
             wait.until(ExpectedConditions.visibilityOf(elements.locationErrorMessage));
             Assert.assertTrue(elements.locationErrorMessage.isDisplayed(), "Location error not shown");
         } else {
+            wait.until(ExpectedConditions.visibilityOf(elements.inpatientWard));
             wait.until(ExpectedConditions.elementToBeClickable(elements.inpatientWard));
             elements.inpatientWard.click();
+            wait.until(ExpectedConditions.visibilityOf(elements.loginButton));
             wait.until(ExpectedConditions.elementToBeClickable(elements.loginButton));
             elements.loginButton.click();
-
             wait.until(ExpectedConditions.visibilityOf(elements.invalidLoginErrorMessage));
             Assert.assertTrue(elements.invalidLoginErrorMessage.getText().equals("Invalid username/password. Please try again."), "Invalid login error not shown");
         }
