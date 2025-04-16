@@ -2,7 +2,6 @@ package OpenMRS.tests;
 
 import OpenMRS.base.BaseDriverParameter;
 import OpenMRS.methods.TC_402_Methods;
-import OpenMRS.methods.TC_404_Methods;
 import OpenMRS.methods.TC_407_Methods;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
