@@ -116,7 +116,7 @@ public class TC_404_407_Elements {
     public WebElement searchResult;
 
     @FindBy(xpath = " //td[@class]")
-    public WebElement deneme;
+    public WebElement delete;
 
 
 
