@@ -237,7 +237,13 @@ To ensure the project runs correctly, the following libraries must be added to t
 - **[Mert Can Özdemir](https://github.com/lioncarnes)**
 
 ---
+## Source
+
+This project is based on the open source software [OpenMRS](https://github.com/openmrs).
+For more information about OpenMRS: [https://openmrs.org](https://openmrs.org)
+
+---
 
 ## 📝 License
 
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
+This project incorporates code from the OpenMRS project: https://github.com/openmrs
