@@ -9,15 +9,17 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import java.time.Duration;
+
 public class TC_407_Methods {
     WebDriver driver;
-    Actions actions;
+    Actions action;
     WebDriverWait wait;
     TC_404_407_Elements elements;
 
-    public TC_407_Methods(WebDriver driver, Actions actions, WebDriverWait wait) {
+    public TC_407_Methods(WebDriver driver, Actions action, WebDriverWait wait) {
         this.driver = driver;
-        this.actions = actions;
+        this.action = action;
         this.wait = wait;
     }
 
@@ -33,7 +35,8 @@ public class TC_407_Methods {
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
         elements.patientSearchField.sendKeys(patientId + Keys.ENTER);
-        MyFunc.sleep(2); //I had to use ImplicitlyWait and ExplicitWait because it could not be solved.
+
+        action.pause(Duration.ofSeconds(2)).build().perform();
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
         String deleteId = elements.delete.getText();
 
