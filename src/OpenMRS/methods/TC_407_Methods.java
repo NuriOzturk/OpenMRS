@@ -27,13 +27,12 @@ public class TC_407_Methods {
         String patientId = "100";
         elements.homePageButton.click();
 
-
         wait.until(ExpectedConditions.visibilityOf(elements.findPatientButton));
         elements.findPatientButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
         elements.patientSearchField.sendKeys(patientId+ Keys.ENTER);
-        MyFunc.Sleep(2);
+        MyFunc.Sleep(2); //I had to use ImplicitlyWait and ExplicitWait because it could not be solved.
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
         String deleteId = elements.delete.getText();
 
@@ -56,7 +55,5 @@ public class TC_407_Methods {
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
 
         Assert.assertEquals(elements.searchResult.getText(),"No matching records found");
-
-
     }
 }

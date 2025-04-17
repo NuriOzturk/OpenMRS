@@ -117,8 +117,4 @@ public class TC_404_407_Elements {
 
     @FindBy(xpath = " //td[@class]")
     public WebElement delete;
-
-
-
-
 }
