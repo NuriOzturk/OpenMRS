@@ -6,7 +6,7 @@ import OpenMRS.methods.TC_405_Methods;
 import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
-public class TC_405_AccessingMyAccountSettings extends BaseDriverParameter {
+public class TC_405_AccessingMyAccountSettingsTest extends BaseDriverParameter {
 
     @Test
     @Parameters({"BrowserType"})
