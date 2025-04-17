@@ -28,6 +28,9 @@ public class TC_407_Methods {
 
         String reason = "The patient's treatment is complete.";
         String patientId = "100";
+
+        action.pause(Duration.ofSeconds(2)).build().perform();
+        wait.until(ExpectedConditions.elementToBeClickable(elements.homePageButton));
         elements.homePageButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.findPatientButton));
@@ -44,6 +47,7 @@ public class TC_407_Methods {
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
         elements.patientSearchField.clear();
         elements.patientSearchField.sendKeys(deleteId + Keys.ENTER);
+        action.pause(Duration.ofSeconds(1)).build().perform();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientIdField));
         Assert.assertEquals(elements.patientIdField.getText(), deleteId);
