@@ -35,9 +35,7 @@ public class BaseDriverParameter {
                 driver = new ChromeDriver(chromeOptions);
         }
         driver.manage().deleteAllCookies();
-//        driver.manage().window().maximize();
-        driver.manage().window().setSize(new Dimension(1500, 1100));  // Ekran boyutunu ayarlar.
-        driver.manage().window().setPosition(new Point(10, 10));     //  Ekran konumunu ayarlar
+        driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         wait = new WebDriverWait(driver, Duration.ofSeconds(30));
