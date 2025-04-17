@@ -19,7 +19,7 @@ public class TC_410_Methods {
         this.wait = wait;
     }
 
-    public void AppointmentTimeZone() {
+    public void appointmentTimeZone() {
         elements = new TC_410_Elements(driver);
         String patientName = "Paul Walker";
 
