@@ -13,7 +13,7 @@ public class TC_404_407_Elements {
     @FindBy(xpath = "//*[@id='content']/div[2]/div/h4")
     public WebElement checkAdmin;
 
-    @FindBy(xpath = "(//*[@type='button'])[7]")
+    @FindBy(xpath = "(//*[@type='button'])[5]")
     public WebElement registerButton;
 
     @FindBy(name = "givenName")
