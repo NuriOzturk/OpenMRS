@@ -13,6 +13,7 @@ public class TC_408_ToList extends BaseDriverParameter {
     public void toListTest() {
         TC_402_Methods loginMethods = new TC_402_Methods(driver, action, wait);
         TC_408_Methods methods = new TC_408_Methods(driver, action, wait);
+
         loginMethods.login();
         methods.toList();
     }

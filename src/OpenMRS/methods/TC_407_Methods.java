@@ -20,10 +20,11 @@ public class TC_407_Methods {
         this.actions = actions;
         this.wait = wait;
     }
-    public void PatientDeletion(){
+
+    public void patientDeletion() {
         elements = new TC_404_407_Elements(driver);
 
-        String reason="The patient's treatment is complete.";
+        String reason = "The patient's treatment is complete.";
         String patientId = "100";
         elements.homePageButton.click();
 
@@ -31,17 +32,17 @@ public class TC_407_Methods {
         elements.findPatientButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
-        elements.patientSearchField.sendKeys(patientId+ Keys.ENTER);
-        MyFunc.Sleep(2); //I had to use ImplicitlyWait and ExplicitWait because it could not be solved.
+        elements.patientSearchField.sendKeys(patientId + Keys.ENTER);
+        MyFunc.sleep(2); //I had to use ImplicitlyWait and ExplicitWait because it could not be solved.
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
         String deleteId = elements.delete.getText();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
         elements.patientSearchField.clear();
-        elements.patientSearchField.sendKeys(deleteId+ Keys.ENTER);
+        elements.patientSearchField.sendKeys(deleteId + Keys.ENTER);
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientIdField));
-        Assert.assertEquals(elements.patientIdField.getText(),deleteId);
+        Assert.assertEquals(elements.patientIdField.getText(), deleteId);
         Assert.assertTrue(elements.generalActionsBox.isDisplayed());
         Assert.assertTrue(elements.deletePatientButton.isDisplayed());
         elements.deletePatientButton.click();
@@ -51,9 +52,9 @@ public class TC_407_Methods {
         elements.reasonConfirmButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
-        elements.patientSearchField.sendKeys(deleteId+ Keys.ENTER);
+        elements.patientSearchField.sendKeys(deleteId + Keys.ENTER);
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
 
-        Assert.assertEquals(elements.searchResult.getText(),"No matching records found");
+        Assert.assertEquals(elements.searchResult.getText(), "No matching records found");
     }
 }

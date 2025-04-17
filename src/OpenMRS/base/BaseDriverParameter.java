@@ -11,7 +11,6 @@ import org.openqa.selenium.edge.EdgeOptions;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.*;
-
 import java.time.Duration;
 
 public class BaseDriverParameter {
@@ -21,7 +20,7 @@ public class BaseDriverParameter {
 
     @BeforeClass
     @Parameters("BrowserType")
-    public void Setup(String browserType) {
+    public void setup(String browserType) {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--lang=en");
         EdgeOptions edgeOptions = new EdgeOptions();
@@ -47,8 +46,8 @@ public class BaseDriverParameter {
     }
 
     @AfterClass
-    public void TearDown() {
-        MyFunc.Sleep(5);
+    public void tearDown() {
+        MyFunc.sleep(5);
         if (driver != null) {
             driver.quit();
         }
