@@ -25,7 +25,7 @@ public class TC_407_Methods {
 
         String reason="The patient's treatment is complete.";
         String patientId = "100";
-//        elements.homePageButton.click();
+        elements.homePageButton.click();
 
 
         wait.until(ExpectedConditions.visibilityOf(elements.findPatientButton));
@@ -35,9 +35,7 @@ public class TC_407_Methods {
         elements.patientSearchField.sendKeys(patientId+ Keys.ENTER);
         MyFunc.Sleep(2);
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
-        System.out.println("deneme = " + elements.deneme.getText());
-        System.out.println("elements.deneme.getText() = " + elements.deneme.getText());
-        String deleteId = elements.deneme.getText();
+        String deleteId = elements.delete.getText();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
         elements.patientSearchField.clear();
