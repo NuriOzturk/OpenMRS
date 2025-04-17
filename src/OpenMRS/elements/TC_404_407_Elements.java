@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TC_404_407_Elements {
+
     public TC_404_407_Elements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -117,8 +118,4 @@ public class TC_404_407_Elements {
 
     @FindBy(xpath = " //td[@class]")
     public WebElement delete;
-
-
-
-
 }

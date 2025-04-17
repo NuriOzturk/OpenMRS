@@ -6,9 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TC_405_Elements {
+
     public TC_405_Elements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
+
     @FindBy(xpath = "(//i[contains(@class, 'icon-user')])[1]")
     public WebElement adminIcon;
 
@@ -29,9 +31,4 @@ public class TC_405_Elements {
 
     @FindBy(xpath = "//h2[text()='My Languages']")
     public WebElement myLanguagesPage;
-
-
-
-
-
 }

@@ -19,7 +19,5 @@ public class TC_407_PatientDeletionTest extends BaseDriverParameter {
         loginMethods.login();
         registrationMethods.patientRegistrations();
         deletionMethods.PatientDeletion();
-
-
     }
 }

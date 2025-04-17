@@ -99,6 +99,7 @@ OpenMRSProject/
 📌 As a user, I want to be able to register a patient by entering their information into the system.
 
 ✅ Expected: User registers a new patient with demographic/contact/relationship info.
+
 ✅ Actual: Patient appeared in the system after successful registration.
 
 <img src="tests_gif/TC_404.gif" alt="404" width="800" height="500"/>
@@ -107,33 +108,37 @@ OpenMRSProject/
 📌 As a user, I want to have an icon or link on the homepage that leads to my account settings.
 
 ✅ Expected: “My Account” opens with settings options like “Change Password.”
+
 ✅ Actual: User accessed and interacted with account settings.
 
-<img src="tests_gif/" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_405.gif" alt="TC_405.gif" width="800" height="500"/>
 
 ### **6️⃣ US_406 - Patient search in list**
 📌 As a doctor, I want to search for a specific patient to access their information.
 
 ✅ Expected: Valid searches return patient data; invalid searches show “No match.”
+
 ✅ Actual: Both positive and negative test cases passed.
 
-<img src="tests_gif/" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_406.gif" alt="TC_406.gif" width="800" height="500"/>
 
 ### **7️⃣ US_407 - Patient deletion**
 📌 As a doctor, I want to be able to delete a patient from the system.
 
 ✅ Expected: Doctor deletes patient record with a valid reason.
+
 ✅ Actual: Patient data successfully removed from the system.
 
-<img src="tests_gif/TC_407.gif" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_407.gif" alt="TC_407.gif" width="800" height="500"/>
 
 ### **8️⃣ US_408 - List all patients**
 📌 As a doctor, I want to list all patients so that I can plan more effectively.
 
 ✅ Expected: The number of rows in the patient table matches the summary below.
+
 ✅ Actual: Patient list and summary count were consistent.
 
-<img src="tests_gif/" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_408.gif" alt="TC_408" width="800" height="500"/>
 
 ---
 
@@ -141,9 +146,10 @@ OpenMRSProject/
 📌 As a doctor, I want to merge duplicate patient records to manage information better.
 
 ✅ Expected: Records merged after selecting IDs and confirming.
+
 ✅ Actual: Patient records merged and displayed correctly.
 
-<img src="tests_gif/TC_409.gif" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_409.gif" alt="TC_409.gif" width="800" height="500"/>
 
 ---
 
@@ -151,9 +157,10 @@ OpenMRSProject/
 📌 As a user, I want to see an error message when scheduling an appointment with incorrect system timezone.
 
 ✅ Expected: Error appears if timezone is not GMT+0.
+
 ✅ Actual: Application blocked scheduling until the timezone was corrected.
 
-<img src="tests_gif/" alt="" width="800" height="500"/>
+<img src="tests_gif/TC_410%20.gif" alt="TC_410%20.gif" width="800" height="500"/>
 
 ---
 
