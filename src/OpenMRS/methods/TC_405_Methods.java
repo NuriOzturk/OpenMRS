@@ -21,14 +21,14 @@ public class TC_405_Methods {
 
     public void myAccountSettings() {
         elements = new TC_405_Elements(driver);
-        action.moveToElement(elements.adminIcon).build().perform();
-        elements.myAccountButton.click();
+        action.moveToElement(elements.adminIcon).moveToElement(elements.myAccountButton).click().build().perform();
 
         elements.ChangePasswordButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(elements.cancelButton));
         Assert.assertTrue(elements.changePasswordPage.isDisplayed(), "Change Password page is not displayed");
 
         elements.cancelButton.click();
+        wait.until(ExpectedConditions.elementToBeClickable(elements.myLanguages));
         elements.myLanguages.click();
 
         wait.until(ExpectedConditions.elementToBeClickable(elements.cancelButton));
