@@ -31,6 +31,7 @@ public class TC_407_Methods {
         elements.homePageButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.findPatientButton));
+        wait.until(ExpectedConditions.elementToBeClickable(elements.findPatientButton));
         elements.findPatientButton.click();
 
         wait.until(ExpectedConditions.visibilityOf(elements.patientSearchField));
