@@ -20,7 +20,7 @@ public class TC_410_Elements {
     @FindBy(xpath = "//input[@id='patient-search']")
     public WebElement patientSearchInput;
 
-    @FindBy(xpath = "//tr[@class='odd']")
+    @FindBy(xpath = "//tr[@class='odd']//td[text()='Paul Walker']/parent::tr")
     public WebElement patientSearchResult;
 
     @FindBy(xpath = "(//i[@class='icon-remove medium'])[2]")
