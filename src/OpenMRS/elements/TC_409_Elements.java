@@ -40,6 +40,6 @@ public class TC_409_Elements {
     @FindBy(xpath = "//div[@class='float-sm-right']")
     public WebElement mergedPatient;
 
-    @FindBy(xpath = "//a[@href='/openmrs/referenceapplication/home.page']")
+    @FindBy(xpath = "//ul[@id='breadcrumbs']//a") //  , //a[@href='/openmrs/referenceapplication/home.page']
     public WebElement homeBtn;
 }

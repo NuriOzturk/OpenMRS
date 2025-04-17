@@ -8,6 +8,13 @@
             <class name="OpenMRS.tests.TC_401_LoginTestWithInvalidData"/>
             <class name="OpenMRS.tests.TC_402_LoginTest"/>
             <class name="OpenMRS.tests.TC_403_Logout"/>
+            <class name="OpenMRS.tests.TC_404_PatientRegistrationTest"/>
+            <class name="OpenMRS.tests.TC_405_AccessingMyAccountSettingsTest"/>
+            <class name="OpenMRS.tests.TC_406_PatientSearchTest"/>
+            <class name="OpenMRS.tests.TC_407_PatientDeletionTest"/>
+            <class name="OpenMRS.tests.TC_408_ToList"/>
+            <class name="OpenMRS.tests.TC_409_MergePatientTest"/>
+            <class name="OpenMRS.tests.TC_410_AppointmentTimeZoneTest"/>
         </classes>
     </test>
 
@@ -17,6 +24,13 @@
             <class name="OpenMRS.tests.TC_401_LoginTestWithInvalidData"/>
             <class name="OpenMRS.tests.TC_402_LoginTest"/>
             <class name="OpenMRS.tests.TC_403_Logout"/>
+            <class name="OpenMRS.tests.TC_404_PatientRegistrationTest"/>
+            <class name="OpenMRS.tests.TC_405_AccessingMyAccountSettingsTest"/>
+            <class name="OpenMRS.tests.TC_406_PatientSearchTest"/>
+            <class name="OpenMRS.tests.TC_407_PatientDeletionTest"/>
+            <class name="OpenMRS.tests.TC_408_ToList"/>
+            <class name="OpenMRS.tests.TC_409_MergePatientTest"/>
+            <class name="OpenMRS.tests.TC_410_AppointmentTimeZoneTest"/>
         </classes>
     </test>
 </suite>

@@ -87,6 +87,5 @@ public class TC_404_Methods {
         Assert.assertTrue(elements.phoneNumberCheckField.getText().contains(phoneNumber));
         Assert.assertTrue(elements.relativesCheckField.getText().contains(relativesName+" - "+relativesType));
         elements.confirmButton.click();
-
     }
 }

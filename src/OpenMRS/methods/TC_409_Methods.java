@@ -28,6 +28,7 @@ public class TC_409_Methods {
 
         for (int i = 0; i < 2; i++) {
             addPatient.patientRegistrations();
+            driver.navigate().refresh();
 
             wait.until(ExpectedConditions.visibilityOf(elements.homeBtn));
             wait.until(ExpectedConditions.elementToBeClickable(elements.homeBtn)).click();
