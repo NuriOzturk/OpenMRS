@@ -1,11 +1,14 @@
 package OpenMRS.methods;
 
 import OpenMRS.elements.TC_409_Elements;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+
+import java.time.Duration;
 
 public class TC_409_Methods {
     WebDriver driver;
@@ -39,7 +42,8 @@ public class TC_409_Methods {
 
         wait.until(ExpectedConditions.visibilityOf(elements.searchByName));
         action.scrollToElement(elements.searchByName).build().perform();
-        elements.searchByName.sendKeys(searchByName);
+        elements.searchByName.sendKeys(searchByName + Keys.ENTER);
+        action.pause(Duration.ofSeconds(2)).build().perform();
 
         wait.until(ExpectedConditions.visibilityOf(elements.firstPatient));
         wait.until(ExpectedConditions.elementToBeClickable(elements.firstPatient));
@@ -49,6 +53,7 @@ public class TC_409_Methods {
         wait.until(ExpectedConditions.elementToBeClickable(elements.secondPatient));
         action.moveToElement(elements.secondPatient).click().build().perform();
 
+        wait.until(ExpectedConditions.visibilityOf(elements.continueBtn));
         wait.until(ExpectedConditions.elementToBeClickable(elements.continueBtn));
         action.moveToElement(elements.continueBtn).click().build().perform();
 
