@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class TC_409_Elements {
+
     public TC_409_Elements(WebDriver driver) {
         PageFactory.initElements(driver, this);
     }
@@ -40,6 +41,6 @@ public class TC_409_Elements {
     @FindBy(xpath = "//div[@class='float-sm-right']")
     public WebElement mergedPatient;
 
-    @FindBy(xpath = "//ul[@id='breadcrumbs']//a") //  , //a[@href='/openmrs/referenceapplication/home.page']
+    @FindBy(xpath = "//ul[@id='breadcrumbs']//a")
     public WebElement homeBtn;
 }

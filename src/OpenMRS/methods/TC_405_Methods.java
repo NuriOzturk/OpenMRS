@@ -27,12 +27,12 @@ public class TC_405_Methods {
         elements.ChangePasswordButton.click();
         wait.until(ExpectedConditions.elementToBeClickable(elements.cancelButton));
         Assert.assertTrue(elements.changePasswordPage.isDisplayed(), "Change Password page is not displayed");
+
         elements.cancelButton.click();
         elements.myLanguages.click();
+
         wait.until(ExpectedConditions.elementToBeClickable(elements.cancelButton));
         Assert.assertTrue(elements.myLanguagesPage.isDisplayed(), "My Languages page is not displayed");
         elements.cancelButton.click();
-
     }
-
 }

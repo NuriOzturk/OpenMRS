@@ -56,7 +56,5 @@ public class TC_407_Methods {
         wait.until(ExpectedConditions.visibilityOf(elements.searchResultField));
 
         Assert.assertEquals(elements.searchResult.getText(),"No matching records found");
-
-
     }
 }

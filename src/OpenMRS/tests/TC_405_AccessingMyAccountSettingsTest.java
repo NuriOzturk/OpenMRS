@@ -16,7 +16,5 @@ public class TC_405_AccessingMyAccountSettingsTest extends BaseDriverParameter {
 
         loginMethods.login();
         methods.myAccountSettings();
-
     }
-
 }

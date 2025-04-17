@@ -16,6 +16,5 @@ public class TC_410_AppointmentTimeZoneTest extends BaseDriverParameter {
 
         loginMethods.login();
         methods.AppointmentTimeZone();
-
     }
 }
